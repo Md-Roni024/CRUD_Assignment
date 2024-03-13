@@ -3,7 +3,7 @@ const {v4:uuidv4} = require("uuid")
 const createEmployee = async (req,res)=>{
     try{
         const employeeCreated = new Employee({
-            id:db.contacts.find().Count()+1,
+            id:uuidv4(),
             firstname:req.body.firstname,
             lastname:req.body.lastname,
             email:req.body.email,
